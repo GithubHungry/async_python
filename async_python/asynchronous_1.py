@@ -7,7 +7,8 @@ Solution: - We should give control to the other clients;
           1) Callbacks;
           2) Generators and Coroutines;
           3) async/await.
-
+Result:
+    Not an async app.
 """
 
 import socket
