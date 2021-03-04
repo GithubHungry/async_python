@@ -36,6 +36,7 @@ def send_message(client_socket):
         response = 'Hello world\n'.encode()
         client_socket.send(response)
     else:
+        to_monitor.remove(client_socket)  # Remove client_socket from monitoring! (Before closing)
         client_socket.close()  # if we kill client -> close connection
 
 
