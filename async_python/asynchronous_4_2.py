@@ -1,8 +1,9 @@
 """
 Changes:
-
+    - Add help structures like tasks, r_r ,r_w , r_t_r , r_t_w.
+    - Rewrite event_loop to manage sockets and generators.
 Result:
-
+    - Async app with generators (see write notes).
 """
 
 import socket
@@ -63,7 +64,7 @@ def event_loop():
         try:
             task = tasks.pop(0)  # generator
 
-            reason, sock = next(task)  # tuple
+            reason, sock = next(task)  # tuple  MAIN PART where all is executed
 
             if reason == 'read':
                 to_read[sock] = task

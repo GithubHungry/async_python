@@ -7,7 +7,7 @@ Changes:
         = Register (and bound wih function).
     - Refactoring: put server_socket creation into server().
 Result:
-    - Async app on callbacks.
+    - Async app with callbacks.
 """
 
 import socket
